@@ -17,6 +17,12 @@ public class IntShowByBit {
         System.out.println(Integer.MAX_VALUE);
     }
 
+    /**
+     * 与 运算 只有都为1,才得1.
+     *
+     *  1向左移i位,然后将number 与其做 与运算，即可得到该位是0还是1
+     * @param number
+     */
     private static void int2Bit(int number){
         for (int i = 31; i > 0; i--){
             System.out.print((number & (1<<i)) == 0 ? 0 : 1);
