@@ -15,6 +15,9 @@ public class IntShowByBit {
         System.out.println("-----------------------------");
         System.out.println((1<<31) - 1);
         System.out.println(Integer.MAX_VALUE);
+
+        System.out.println(1024>>2);
+        System.out.println(1024>>>2);
     }
 
     /**
@@ -28,5 +31,6 @@ public class IntShowByBit {
             System.out.print((number & (1<<i)) == 0 ? 0 : 1);
         }
         System.out.println();
+        System.out.println("------");
     }
 }
