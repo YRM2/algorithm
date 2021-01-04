@@ -22,6 +22,29 @@ public class RandToRand {
         System.out.println((double) count /(double) testTimes);
         System.out.println((double) count);
 
+
+        System.out.println("-----------------------------------------------");
+
+        count = 0;
+        for (int i = 0; i < testTimes; i++){
+            if (Math.random() * 8 < 4){
+                count++;
+            }
+        }
+        System.out.println((double)count/(double)testTimes);
+
+        System.out.println("-----------------------------------------------");
+
+        int K = 9;
+        int[] counts = new int[9];
+        for (int i = 0; i < testTimes; i++){
+            int ians = (int)(Math.random() * K);
+            counts[ians]++;
+        }
+
+        for (int i = 0; i < K; i++){
+            System.out.println((i + "这个数出现了 " + counts[i] + "次"));
+        }
     }
 
 }
