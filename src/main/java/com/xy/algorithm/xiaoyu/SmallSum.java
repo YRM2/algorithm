@@ -26,7 +26,7 @@ public class SmallSum {
 
     private int mergerArr(int[] arr, int l, int mid, int r){
         int result = 0;
-        int[] tmpArr = new int[arr.length];
+        int[] tmpArr = new int[r -l + 1];
         int l_p = l;
         int r_p = mid + 1;
         int i = 0;
@@ -39,6 +39,10 @@ public class SmallSum {
         }
         while (r_p <= r){
             tmpArr[i++] = arr[r_p++];
+        }
+
+        for (i = 0; i < tmpArr.length; i++) {
+            arr[l + i] = tmpArr[i];
         }
         return result;
     }
